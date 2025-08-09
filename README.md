@@ -2,9 +2,22 @@
 
 This library is for Bosch's BMP3XX series of pressure sensors. It is based on the Bosch's BMP390 datasheet and application notes. It is designed to be slightly more lightweight than the Adafruit BMP3XX library, and with minimal dependencies so it can be more easily integrated into other projects.
 
-## Example
+## Installation
+
+Just download the repo as a zip and go to `Sketch / Include Library / Add .ZIP Library...` in the Arduino IDE. 
+
+You can also clone the repo into your `libraries` folder.
+
+Or add it to your `platformio.ini` file under `lib_deps`:
+
+```ini
+lib_deps =
+    https://github.com/artichoked1/BMP3XX.git#1.0.0
+```
+
+## Usage
 ```cpp
-// Initialize sensor
+// Initialise sensor
 BMP3XX bmp;
 bmp.configure(BMP3XX_OVERSAMPLING_4X, BMP3XX_OVERSAMPLING_4X, BMP3XX_IIR_FILTER_OFF, BMP3XX_ODR_50HZ);
 bmp.begin();
